@@ -11,7 +11,7 @@ def test_import():
     result = sql_queries_for_intermediate_aggregation()
     logging.info(result)
     result = sql_queries_for_metrics()
-    logging.info(result)
+    logging.info(result) #
 
 
 with DAG(
