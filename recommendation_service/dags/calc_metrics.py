@@ -3,8 +3,8 @@ import pendulum
 import sys
 from airflow.models.dag import DAG
 from airflow.decorators import task
-from recommendation_service.dags.sql_queries_for_intermediate_aggregation import sql_queries_for_intermediate_aggregation
-from recommendation_service.dags.sql_queries_for_metrics import sql_queries_for_metrics
+from dags.sql_queries_for_intermediate_aggregation import sql_queries_for_intermediate_aggregation
+# from recommendation_service.dags.sql_queries_for_metrics import sql_queries_for_metrics
 
 @task
 def test_import():
@@ -15,7 +15,7 @@ def test_import():
 
 
 with DAG(
-    dag_id='daggit',
+    dag_id='daggit1',
     start_date=pendulum.datetime(2025, 1, 1),
     schedule=None,
 ):
