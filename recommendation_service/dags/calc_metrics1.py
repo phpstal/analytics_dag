@@ -10,8 +10,8 @@ from repo.recommendation_service.dags.sql_queries_for_intermediate_aggregation i
 def test_import():
     result = sql_queries_for_intermediate_aggregation()
     logging.info(result)
-    result = sql_queries_for_metrics()
-    logging.info(result)
+    #result = sql_queries_for_metrics()
+    #logging.info(result)
 
 
 with DAG(
