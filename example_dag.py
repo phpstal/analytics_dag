@@ -8,6 +8,7 @@ from airflow.providers.yandex.operators.yandexcloud_dataproc import (
     DataprocCreatePysparkJobOperator,
 )
 from airflow.sensors.base import BaseSensorOperator
+from airflow.providers.yandex.hooks.yandexcloud_dataproc import DataprocHook
 
 
 env_name = "stage"
