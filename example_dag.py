@@ -148,7 +148,7 @@ def create_daily_ingest_dag(dag_id):
             folder_id=CONFIG["folder_id"],
             cluster_name="asdsads",
             mode="reschedule",
-            on_failure_callback=task_failure_callback,
+            #on_failure_callback=task_failure_callback,
         )
 
         pyspark_conf = (
@@ -163,7 +163,7 @@ def create_daily_ingest_dag(dag_id):
             task_id="run_spark_pipeline",
             cluster_id="{{ ti.xcom_pull(task_ids='waiting_cluster') }}",
             retries=3,
-            on_failure_callback=task_failure_callback,
+            #on_failure_callback=task_failure_callback,
             **pyspark_conf,
         )
 
