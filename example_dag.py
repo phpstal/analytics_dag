@@ -146,7 +146,7 @@ def create_daily_ingest_dag(dag_id):
         cluster_sensor = DataProcClusterSensor(
             task_id="waiting_cluster",
             folder_id=CONFIG["folder_id"],
-            cluster_name=MAIN_DATAPROC_CLUSTER.name,
+            cluster_name="asdsads",
             mode="reschedule",
             on_failure_callback=task_failure_callback,
         )
